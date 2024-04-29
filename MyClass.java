@@ -1,29 +1,24 @@
-package com.demo;
+package com.demo.Poly;
 
-class Test{
-	public static void test() {
-		System.out.println("test test");
+public abstract class MyClass {
 	
-}
-}
+	int firstIndex;
+	int lastIndex;
 	
-public class MyClass{
-	public static int test() {
-		System.out.println("my class test");
-		return 100;
-		}
-	
-	public static void main(String args[]) { //JVM will start the execution from here
-		System.out.println("main");
+	public MyClass() {
 		
-		int z[]= {1,2,3,4,5,6,7};
-		for (int i=0;i<z.length;i++) {
-			System.out.println(z[i]);
-		}
-		
-		int x=test(); //call of test method
-		System.out.println(x);
-		Test.test();
 	}
-//JVM will end the execution here
+	
+	public MyClass(int firstIndex, int lastIndex) {
+		super();
+		this.firstIndex=firstIndex;
+		this.lastIndex=lastIndex;
+	}
+	
+	abstract void test(); //abstract method
+	
+	void test1() {//concrete method
+		System.out.println(firstIndex + "," + lastIndex);
+		
+	}
 }
