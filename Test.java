@@ -1,23 +1,26 @@
-package com.inheritance;
+package MultipleInheritanceInterface;
 
-public class Test {
+public class Test implements A,B{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		ContractEmployee ce = new ContractEmployee();
-		ce.setId(100);
-		ce.setName("hee");
-		ce.setStipend(200);
-		System.out.println(ce.getId()+","+ ce.getName()+","+ce.getStipend());
+		Test t = new Test();
+		t.test();
 		
 
-		RegularEmployee re = new RegularEmployee();
-		re.setId(100);
-		re.setName("hee");
-		re.setSalary(1788);
-		System.out.println(re.getId()+","+ re.getName()+","+re.getSalary());
+	}
+
+	@Override
+	public void calculate() {
+		// TODO Auto-generated method stub
 		
+	}
+	
+	//overriding default method since interface A and B has same test method. if it had test() and test1() then was ok.
+	@Override
+	public void test() {
+		A.super.test();
+		//B.super.test();
 	}
 
 }

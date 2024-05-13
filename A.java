@@ -1,18 +1,8 @@
-package com.inheritance;
+package MultipleInheritanceInterface;
 
-public class A {
-	
-	A(){
-		this(100);
-		System.out.println("A constructor");
-	}
-	
-	A(int x){
-		System.out.println(x);
-	}
-	
-	A(String x){
-		this();
-		System.out.println(x);
+public interface A {
+	void calculate();
+	default void test() {
+		System.out.println("A test");
 	}
 }
