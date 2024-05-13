@@ -2,21 +2,21 @@ package MethodReferenceExamples;
 
 import java.util.List;
 
-public class Customer {
+public class CustomerDTO {
 	private Integer id;
 	private String name;
 	private String email;
 	private List<String> moNumber;
-	public Customer() {
+	public CustomerDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Customer(Integer id, String name, String email, List<String> mobileNo) {
+	public CustomerDTO(Integer id, String name, String email, List<String> moNumber) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
-		this.moNumber = mobileNo;
+		this.moNumber = moNumber;
 	}
 	public Integer getId() {
 		return id;
@@ -39,12 +39,12 @@ public class Customer {
 	public List<String> getMoNumber() {
 		return moNumber;
 	}
-	public void setMoNumber(List<String> mobileNo) {
-		this.moNumber = mobileNo;
+	public void setMoNumber(List<String> moNumber) {
+		this.moNumber = moNumber;
 	}
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + ", email=" + email + ", mobileNo=" + moNumber + "]";
+		return "CustomerDTO [id=" + id + ", name=" + name + ", email=" + email + ", moNumber=" + moNumber + "]";
 	}
 	
 	
